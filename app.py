@@ -7,6 +7,7 @@ def register():
     if request.method == "POST":
         name = request.form['name']
         email = request.form['email']
+        phone = request.form['phone']
         event = request.form['event']
         return f"""
         <!DOCTYPE html>
@@ -124,6 +125,10 @@ def register():
                     <div class="detail-row">
                         <span class="detail-label">Email:</span>
                         <span class="detail-value">{email}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Phone:</span>
+                        <span class="detail-value">{phone}</span>
                     </div>
                     <div class="detail-row">
                         <span class="detail-label">Event:</span>
